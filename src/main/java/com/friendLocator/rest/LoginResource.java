@@ -1,11 +1,12 @@
 package com.friendLocator.rest;
 
+import com.friendLocator.beans.NewUserRegisterVO;
 import com.friendLocator.utils.Response;
 
 public class LoginResource {
 	
 	
-	public Response registerUser(){
+	public Response registerUser(NewUserRegisterVO registerVO){
 		return null;
 	}
 	

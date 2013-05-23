@@ -2,16 +2,32 @@ package com.friendLocator.db.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="UserRegistrationDetails")
 public class UserRegistrationDetails {
 
+	public Integer sno;
 	private String userName;
-	private User userDetails;
 	private String password;
 	private String registeredAt;
 	private String activationKey;
-	private Date createdAt;
 	private Date updatedAt;
 
+	@Id
+	public Integer getSno() {
+		return sno;
+	}
+
+	public void setSno(Integer sno) {
+		this.sno = sno;
+	}
+
+	@Column(name="UserName")
 	public String getUserName() {
 		return userName;
 	}
@@ -20,14 +36,7 @@ public class UserRegistrationDetails {
 		this.userName = userName;
 	}
 
-	public User getUserDetails() {
-		return userDetails;
-	}
-
-	public void setUserDetails(User userDetails) {
-		this.userDetails = userDetails;
-	}
-
+	@Column(name="Password")
 	public String getPassword() {
 		return password;
 	}
@@ -36,6 +45,7 @@ public class UserRegistrationDetails {
 		this.password = password;
 	}
 
+	@Column(name="RegisteredAt")
 	public String getRegisteredAt() {
 		return registeredAt;
 	}
@@ -44,6 +54,7 @@ public class UserRegistrationDetails {
 		this.registeredAt = registeredAt;
 	}
 
+	@Column(name="ActivationKey")
 	public String getActivationKey() {
 		return activationKey;
 	}
@@ -52,14 +63,7 @@ public class UserRegistrationDetails {
 		this.activationKey = activationKey;
 	}
 
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
+	@Column(name="UpdatedAt")
 	public Date getUpdatedAt() {
 		return updatedAt;
 	}
