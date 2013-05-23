@@ -1,11 +1,16 @@
 package com.friendLocator.db.model;
 
+import java.util.Date;
+
 public class UserRegistrationDetails {
 
 	private String userName;
 	private User userDetails;
 	private String password;
 	private String registeredAt;
+	private String activationKey;
+	private Date createdAt;
+	private Date updatedAt;
 
 	public String getUserName() {
 		return userName;
@@ -37,6 +42,30 @@ public class UserRegistrationDetails {
 
 	public void setRegisteredAt(String registeredAt) {
 		this.registeredAt = registeredAt;
+	}
+
+	public String getActivationKey() {
+		return activationKey;
+	}
+
+	public void setActivationKey(String activationKey) {
+		this.activationKey = activationKey;
+	}
+
+	public Date getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 
 }
